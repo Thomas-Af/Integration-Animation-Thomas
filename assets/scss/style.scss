@@ -1,0 +1,652 @@
+@import 'reset';
+@import 'keyframes';
+@import 'variables';
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  h2 { 
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  main {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    color: $white;
+    section {
+      height: 100vh;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      scroll-snap-align: start;
+      scroll-snap-stop: normal;
+      scroll-behavior: smooth;
+    }
+    .presentation {
+      background-color:  $gris;
+      article {
+        display: flex;
+        flex-direction: row;
+        .perso {
+          width: auto;
+          height: auto;
+        }
+        img:first-child {
+          animation-duration: 1.5s;
+          animation-name: backInDown;
+        }
+        img:nth-child(3){
+          animation-duration: 1.5s;
+          animation-name: backInDownSecond;
+        }
+      }
+    }
+    .regles {
+      background-color:  $bleu-gris;
+      div {
+        background-color:  $bleu-gris;
+        display: grid;
+        grid-template-areas: 
+          "but     place"
+          "manche  fin";
+          gap: 25px;
+          padding: 50px;
+          height: 100vh;
+          align-items: center;
+          justify-items: center;
+          
+        article {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+          position: relative;
+          background-color: $gris;
+          color: $black;
+          padding: 10px;
+          width: 80%;
+          height: 90%;
+          li {
+            font-size: 14px;
+            font-family: $openSans;
+            line-height: 20px;
+          }
+          p {
+            font-size: 14px;
+            font-family: $openSans;
+            line-height: 20px;
+          }
+          h2 {
+            font-family: $vollkorn;
+          }
+          img {
+            position: absolute;
+            top: -17%;
+            left: -8%;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-name: turn;
+          }
+        }
+        article:first-child {
+          grid-area: but;
+          &:hover {
+            img {
+              animation-duration: 4s;
+              animation-iteration-count: infinite;
+              animation-name: turnHover;
+            }
+          }
+        }
+        article:nth-child(2) {
+          grid-area: place;
+          &:hover {
+            img {
+              animation-duration: 4s;
+              animation-iteration-count: infinite;
+              animation-name: turnHover;
+            }
+          }
+        }
+        article:nth-child(3) {
+          grid-area: manche;
+          &:hover {
+            img {
+              animation-duration: 4s;
+              animation-iteration-count: infinite;
+              animation-name: turnHover;
+            }
+          }
+        }
+        article:last-child {
+          grid-area: fin;
+          &:hover {
+            img {
+              animation-duration: 4s;
+              animation-iteration-count: infinite;
+              animation-name: turnHover;
+            }
+          }
+        }
+      }
+    }
+    .equipeStandard {
+      background-color:  $bleu-fonce;
+      position: relative;
+      article {
+        width: 100vw;
+        height: 75vh;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+        div {
+          height: 100vh;
+          width: 50vw;
+          padding: 10px;
+          margin-right: auto;
+          margin-left: auto;
+          background-color: $gris-clair;
+      
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          
+          scroll-snap-align: start;
+          scroll-snap-stop: normal;
+          scroll-behavior: smooth;
+          img {
+            left: -10%;
+            top: 15%;
+            width: 10%;
+            $rotateVar: calc(73vw * var(--ratio));
+            transform: translateX($rotateVar);
+            position: absolute;
+          }
+          p {
+            width: 50%;
+            padding-top: 15px;
+            color: $black;
+            text-align: center;
+            font-family: $openSans;
+          }
+          h2 {
+            color: $black;
+            font-family: $vollkorn;
+          }
+        }
+
+      }
+    }
+    .equipeSpecifique {
+      background-color:  $bleu-gris;
+      display: grid;
+      grid-template-areas: 
+        "major    commando  sapeur"
+        "infeste  ombre     sorciere";
+        padding: 25px;
+        gap: 10px;
+        text-align: center;
+        article {
+          img {
+            border:3px solid $white;
+            cursor: pointer;
+            padding: 0;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            background: #f0f0f0;
+            transition: width 3s, height 3s, transform 3s;
+          }
+          &:hover {
+            img {
+              width: 100px;
+              height: 100px;
+              transform: rotate(360deg);
+              }
+          }
+          h2 {
+            font-family: $vollkorn;
+          }
+          p {
+            font-family: $openSans;
+          }
+        }
+      article:first-child {
+        grid-area: major;
+        img {
+          background: $bleu;
+        }
+      }
+      article:nth-child(2) {
+        grid-area: commando;
+        img {
+          background: $bleu;
+        }
+      }
+      article:nth-child(3) {
+        grid-area: sapeur;
+        img {
+          background: $bleu;
+        }
+      }
+      article:nth-child(4) {
+        grid-area: infeste;
+        img {
+          background: $rouge;
+        }
+      }
+      article:nth-child(5) {
+        grid-area: ombre;
+        img {
+          background: $rouge;
+        }
+      }
+      article:last-child {
+        grid-area: sorciere;
+        img {
+          background: $rouge;
+        }
+      }
+    }
+    .gagner {
+      background-color:  $bleu-fonce;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      article {
+        position: relative;
+        text-align: center;
+        h2 {
+          padding-bottom: 10px;
+          font-family: $vollkorn;
+        }
+        .pionCaptain {
+          position: absolute;
+          top: 50%;
+          right: 37%;
+          width: 10%;
+        }
+        .pionGarde {
+          position: absolute;
+          top: 18%;
+          left: 20%;
+          width: 10%;
+        }
+        .pionCaptainAlive {
+          position: absolute;
+          top: 50%;
+          right: 48%;
+          width: 10%;
+        }
+        .pionDeadGarde1 {
+          position: absolute;
+          top: 22%;
+          left: 20%;
+          width: 10%;
+        }
+        .pionDeadGarde2 {
+          position: absolute;
+          top: 32%;
+          left: 70%;
+          width: 10%;
+        }
+        .pionDeadGarde3 {
+          position: absolute;
+          top: 36%;
+          left: 50%;
+          width: 10%;
+        }
+      }
+      article:first-child:hover {
+        .pionGarde {
+            animation-duration: 4s;
+            animation-iteration-count: 1;
+            animation-name: animateGard;
+        }
+        .pionCaptain {
+          animation-duration: 2s;
+          animation-delay: 2s;
+          animation-iteration-count: 1;
+          animation-name: animateCaptain;
+        }
+      }
+      article:nth-child(2):hover {
+        .pionDeadGarde1 {
+          animation-duration: 3.5s;
+          animation-iteration-count: 1;
+          animation-name: animateDeadGarde1;
+        }
+        .pionDeadGarde2 {
+          animation-duration: 2.5s;
+          animation-delay: 1s;
+          animation-iteration-count: 1;
+          animation-name: animateDeadGarde2;
+        }
+        .pionDeadGarde3 {
+          animation-duration: 2s;
+          animation-delay: 1.5s;
+          animation-iteration-count: 1;
+          animation-name: animateDeadGarde3;
+        }
+      }
+    }
+    .lastOne {
+      background-color:  $bleu-gris;
+      flex-direction: column;
+      gap: 70px;
+      padding: 10px;
+      h2 {
+        font-family: $vollkorn;
+      }
+      article {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        div {
+          position: relative;
+          height: 150px;
+          svg {
+            fill: none;
+            stroke: $gris-gris;
+            stroke-miterlimit: 10;
+            width: 35px;
+            position: absolute;
+            top: -6%;
+          }
+        }
+        div:first-child {
+          svg {
+            left: 44%;
+          }
+          &:hover {
+            stroke-dasharray: 1257px;
+            stroke-dashoffset: 1257px;
+            animation-name: draw;
+            animation-duration: 10s;
+            animation-fill-mode: forwards;
+          }
+        }
+        div:nth-child(2) {
+          svg {
+            left: 39%;
+          }
+          &:hover {
+            stroke-dasharray: 1257px;
+            stroke-dashoffset: 1257px;
+            animation-name: draw;
+            animation-duration: 10s;
+            animation-fill-mode: forwards;
+          }
+        }
+        div:nth-child(3) {
+          svg {
+            left: 47%;
+          }
+          &:hover {
+            stroke-dasharray: 1257px;
+            stroke-dashoffset: 1257px;
+            animation-name: draw;
+            animation-duration: 10s;
+            animation-fill-mode: forwards;
+          }
+        }
+        div:last-child {
+          svg {
+            left: 38%;
+          }
+          &:hover {
+            stroke-dasharray: 1257px;
+            stroke-dashoffset: 1257px;
+            animation-name: draw;
+            animation-duration: 10s;
+            animation-fill-mode: forwards;
+          }
+        }
+      }
+      }
+    }
+}
+
+@media screen and (max-width: 375px){
+  body {
+    main {
+      .presentation {
+        article {
+          img {
+            height: 75px;
+            width: 75px;
+          }
+          .perso {
+            width: 100px;
+            height: auto;
+          }
+        }
+      }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 768px){
+    body {
+      main {
+        .presentation {
+          article {
+            justify-content: center;
+            img {
+              height: 30%;
+              width: 30%;
+            }
+            .perso {
+              height: 30%;
+              width: 30%;
+            }
+          }
+        }
+        .regles {
+          div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+            height: 100vh;
+            article {
+              width: 100%;
+              padding: 5px;
+              margin: 5px;
+              img {
+                width: 30px;
+                top: -6%;
+                left: -1%
+              }
+              h2{
+                font-size: 15px;
+              }
+              p {
+                font-size: 11px;
+                line-height: 15px;
+              }
+              li {
+                font-size: 11px;
+                line-height: 15px;
+              }
+            }
+          }
+        }
+        .equipeStandard {
+          article {
+            div {
+              width: 70vw;
+              img {
+                left: -22%;
+                width: 20%;
+                transform: translateX(calc(83vw * var(--ratio)));
+              }
+            }
+          }
+        }
+        .equipeSpecifique {
+            grid-template-areas: 
+              "major    commando"
+              "sapeur   infeste"
+              "ombre    sorciere";
+            article {
+              img {
+                width: 70px;
+                height: 70px;
+              }
+              h2 {
+                font-size: 17px;
+              }
+              p {
+                font-size: 12px;
+              }
+            }
+        }
+        .gagner {
+          flex-direction: column;
+          justify-content: space-evenly;
+          article {
+            h2 {
+              font-size: 17px;
+            }
+          }
+        }      
+        .lastOne {
+          gap: 20px;
+          article {
+            flex-direction: column;
+            justify-content: space-evenly;
+            gap: 5px;
+            div {
+              img {
+                height: 75%;
+              }
+              svg {
+                top: -14%;
+              }
+            }
+            div:first-child {
+              svg {
+                left: 40%;
+              }
+            }
+            div:nth-child(3) {
+              svg {
+                left: 41%;
+              }
+            }
+            div:last-child {
+              svg {
+                left: 35%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+      main {
+        .presentation {
+          article {
+            justify-content: center;
+            img {
+              height: 30%;
+              width: 30%;
+            }
+            .perso {
+              height: 30%;
+              width: 30%;
+            }
+          }
+        }
+        .regles {
+          div {
+            article {
+              height: 100%;
+              img {
+                position: absolute;
+                top: -7%;
+              }
+              h2{
+                font-size: 17px;
+              }
+              p {
+                font-size: 12px;
+                line-height: 14px;
+              }
+              li {
+                font-size: 12px;
+                line-height: 14px;
+              }
+            }
+          }
+        } 
+        .lastOne {
+          article {
+            div {
+              img {
+                width: 50%;
+              }
+              svg {
+                top: -18%;
+              }
+            }
+            div:first-child {
+              svg {
+                left: 18%;
+              }
+            }
+            div:nth-child(2) {
+              svg {
+                left: 15%;
+              }
+            }
+            div:nth-child(3) {
+              svg {
+                left: 19%;
+              }
+            }
+            div:last-child {
+              svg {
+                left: 15%;
+              }
+            }
+          }
+          }
+      }
+    }
+  }
+  
+  @media screen and (min-width: 1600px) {
+    body {
+      main { 
+        .regles {
+          div {
+            article {
+              img {
+                top: -8%;
+                left: -4%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }

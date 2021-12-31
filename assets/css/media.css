@@ -1,0 +1,177 @@
+@media screen and (max-width: 375px) {
+  body main .presentation article img {
+    height: 75px;
+    width: 75px;
+  }
+  body main .presentation article .perso {
+    width: 100px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  body main .presentation article {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body main .presentation article img {
+    height: 30%;
+    width: 30%;
+  }
+  body main .presentation article .perso {
+    height: 30%;
+    width: 30%;
+  }
+  body main .regles div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    height: 100vh;
+  }
+  body main .regles div article {
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+  }
+  body main .regles div article img {
+    width: 30px;
+    top: -6%;
+    left: -1%;
+  }
+  body main .regles div article h2 {
+    font-size: 15px;
+  }
+  body main .regles div article p {
+    font-size: 11px;
+    line-height: 15px;
+  }
+  body main .regles div article li {
+    font-size: 11px;
+    line-height: 15px;
+  }
+  body main .equipeStandard article div {
+    width: 70vw;
+  }
+  body main .equipeStandard article div img {
+    left: -22%;
+    width: 20%;
+    -webkit-transform: translateX(calc(83vw * var(--ratio)));
+            transform: translateX(calc(83vw * var(--ratio)));
+  }
+  body main .equipeSpecifique {
+        grid-template-areas: "major    commando" "sapeur   infeste" "ombre    sorciere";
+  }
+  body main .equipeSpecifique article img {
+    width: 70px;
+    height: 70px;
+  }
+  body main .equipeSpecifique article h2 {
+    font-size: 17px;
+  }
+  body main .equipeSpecifique article p {
+    font-size: 12px;
+  }
+  body main .gagner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  body main .gagner article h2 {
+    font-size: 17px;
+  }
+  body main .lastOne {
+    gap: 20px;
+  }
+  body main .lastOne article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    gap: 5px;
+  }
+  body main .lastOne article div img {
+    height: 75%;
+  }
+  body main .lastOne article div svg {
+    top: -14%;
+  }
+  body main .lastOne article div:first-child svg {
+    left: 40%;
+  }
+  body main .lastOne article div:nth-child(3) svg {
+    left: 41%;
+  }
+  body main .lastOne article div:last-child svg {
+    left: 35%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body main .presentation article {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body main .presentation article img {
+    height: 30%;
+    width: 30%;
+  }
+  body main .presentation article .perso {
+    height: 30%;
+    width: 30%;
+  }
+  body main .regles div article {
+    height: 100%;
+  }
+  body main .regles div article img {
+    position: absolute;
+    top: -7%;
+  }
+  body main .regles div article h2 {
+    font-size: 17px;
+  }
+  body main .regles div article p {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  body main .regles div article li {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  body main .lastOne article div img {
+    width: 50%;
+  }
+  body main .lastOne article div svg {
+    top: -18%;
+  }
+  body main .lastOne article div:first-child svg {
+    left: 18%;
+  }
+  body main .lastOne article div:nth-child(2) svg {
+    left: 15%;
+  }
+  body main .lastOne article div:nth-child(3) svg {
+    left: 19%;
+  }
+  body main .lastOne article div:last-child svg {
+    left: 15%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  body main .regles div article img {
+    top: -8%;
+    left: -4%;
+  }
+}

@@ -1,0 +1,120 @@
+@keyframes backInDown {
+    0% {
+        transform: translateY(-1200px) translateX(-500px) scale(0.7);
+        opacity: 0.7;
+    }
+
+    70% {
+        transform: translateY(0px) translateX(0px) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        height: auto;
+    }
+}
+
+@keyframes backInDownSecond {
+    0% {
+        transform: translateY(-1200px) translateX(500px) scale(0.7);
+        opacity: 0.7;
+    }
+
+    70% {
+        transform: translateY(0px) translateX(0px) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        height: auto;
+    }
+}
+
+@keyframes turn {
+    0% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(350deg);
+    }
+}
+
+@keyframes turnHover {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(360deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(360deg);
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+}
+
+@keyframes animateGard {
+    0% {
+      top: 18%;
+      left: 20%;
+    }
+    100% {
+      top: 50%;
+      left: 53%;
+    }
+}
+
+@keyframes animateCaptain {
+    0% {
+      top: 50%;
+      right: 37%;
+    }
+    100% {
+      top: 70%;
+      right: 17%;
+    }
+}
+
+@keyframes animateDeadGarde1 {
+    0% {
+      top: 22%;
+      left: 20%;
+    }
+    100% {
+      top: 50%;
+      left: 9%;
+    }
+}
+
+@keyframes animateDeadGarde2 {
+    0% {
+      top: 32%;
+      left: 70%;
+    }
+    100% {
+      top: 52%;
+      left: 83%;
+    }
+}
+
+@keyframes animateDeadGarde3 {
+    0% {
+      top: 36%;
+      left: 50%;
+    }
+    100% {
+      top: 82%;
+      left: 57%;
+    }
+}
+
+@keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+}
