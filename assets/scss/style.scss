@@ -59,11 +59,11 @@ body {
         grid-template-areas: 
           "but     place"
           "manche  fin";
-          gap: 25px;
-          padding: 50px;
-          height: 100vh;
-          align-items: center;
-          justify-items: center;
+        gap: 25px;
+        padding: 50px;
+        height: 100vh;
+        align-items: center;
+        justify-items: center;
           
         article {
           display: flex;
@@ -186,7 +186,6 @@ body {
             font-family: $vollkorn;
           }
         }
-
       }
     }
     .equipeSpecifique {
@@ -195,34 +194,34 @@ body {
       grid-template-areas: 
         "major    commando  sapeur"
         "infeste  ombre     sorciere";
-        padding: 25px;
-        gap: 10px;
-        text-align: center;
-        article {
+      padding: 25px;
+      gap: 10px;
+      text-align: center;
+      article {
+        img {
+          border:3px solid $white;
+          cursor: pointer;
+          padding: 0;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          background: #f0f0f0;
+          transition: width 3s, height 3s, transform 3s;
+        }
+        &:hover {
           img {
-            border:3px solid $white;
-            cursor: pointer;
-            padding: 0;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            background: #f0f0f0;
-            transition: width 3s, height 3s, transform 3s;
-          }
-          &:hover {
-            img {
-              width: 100px;
-              height: 100px;
-              transform: rotate(360deg);
-              }
-          }
-          h2 {
-            font-family: $vollkorn;
-          }
-          p {
-            font-family: $openSans;
+            width: 100px;
+            height: 100px;
+            transform: rotate(360deg);
           }
         }
+        h2 {
+          font-family: $vollkorn;
+        }
+        p {
+          font-family: $openSans;
+        }
+      }
       article:first-child {
         grid-area: major;
         img {
@@ -417,8 +416,8 @@ body {
           }
         }
       }
-      }
     }
+  }
 }
 
 @media screen and (max-width: 375px){
@@ -436,217 +435,217 @@ body {
           }
         }
       }
-      }
     }
   }
+}
   
-  @media screen and (max-width: 768px){
-    body {
-      main {
-        .presentation {
+@media screen and (max-width: 768px){
+  body {
+    main {
+      .presentation {
+        article {
+          justify-content: center;
+          img {
+            height: 30%;
+            width: 30%;
+          }
+          .perso {
+            height: 30%;
+            width: 30%;
+          }
+        }
+      }
+      .regles {
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          padding: 10px;
+          height: 100vh;
           article {
-            justify-content: center;
+            width: 100%;
+            padding: 5px;
+            margin: 5px;
             img {
-              height: 30%;
-              width: 30%;
+              width: 30px;
+              top: -6%;
+              left: -1%
             }
-            .perso {
-              height: 30%;
-              width: 30%;
+            h2{
+              font-size: 15px;
+            }
+            p {
+              font-size: 11px;
+              line-height: 15px;
+            }
+            li {
+              font-size: 11px;
+              line-height: 15px;
             }
           }
         }
-        .regles {
+      }
+      .equipeStandard {
+        article {
           div {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding: 10px;
-            height: 100vh;
-            article {
-              width: 100%;
-              padding: 5px;
-              margin: 5px;
-              img {
-                width: 30px;
-                top: -6%;
-                left: -1%
-              }
-              h2{
-                font-size: 15px;
-              }
-              p {
-                font-size: 11px;
-                line-height: 15px;
-              }
-              li {
-                font-size: 11px;
-                line-height: 15px;
-              }
+            width: 70vw;
+            img {
+              left: -22%;
+              width: 20%;
+              transform: translateX(calc(83vw * var(--ratio)));
             }
           }
         }
-        .equipeStandard {
-          article {
-            div {
-              width: 70vw;
-              img {
-                left: -22%;
-                width: 20%;
-                transform: translateX(calc(83vw * var(--ratio)));
-              }
-            }
+      }
+      .equipeSpecifique {
+        grid-template-areas: 
+          "major    commando"
+          "sapeur   infeste"
+          "ombre    sorciere";
+        article {
+          img {
+            width: 70px;
+            height: 70px;
+          }
+          h2 {
+            font-size: 17px;
+          }
+          p {
+            font-size: 12px;
           }
         }
-        .equipeSpecifique {
-            grid-template-areas: 
-              "major    commando"
-              "sapeur   infeste"
-              "ombre    sorciere";
-            article {
-              img {
-                width: 70px;
-                height: 70px;
-              }
-              h2 {
-                font-size: 17px;
-              }
-              p {
-                font-size: 12px;
-              }
-            }
+      }
+      .gagner {
+        flex-direction: column;
+        justify-content: space-evenly;
+        article {
+          h2 {
+            font-size: 17px;
+          }
         }
-        .gagner {
+      }      
+      .lastOne {
+        gap: 20px;
+        article {
           flex-direction: column;
           justify-content: space-evenly;
+          gap: 5px;
+          div {
+            img {
+              height: 75%;
+            }
+            svg {
+              top: -14%;
+            }
+          }
+          div:first-child {
+            svg {
+              left: 40%;
+            }
+          }
+          div:nth-child(3) {
+            svg {
+              left: 41%;
+            }
+          }
+          div:last-child {
+            svg {
+              left: 35%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    main {
+      .presentation {
+        article {
+          justify-content: center;
+          img {
+            height: 30%;
+            width: 30%;
+          }
+          .perso {
+            height: 30%;
+            width: 30%;
+          }
+        }
+      }
+      .regles {
+        div {
           article {
-            h2 {
+            height: 100%;
+            img {
+              position: absolute;
+              top: -7%;
+            }
+            h2{
               font-size: 17px;
             }
-          }
-        }      
-        .lastOne {
-          gap: 20px;
-          article {
-            flex-direction: column;
-            justify-content: space-evenly;
-            gap: 5px;
-            div {
-              img {
-                height: 75%;
-              }
-              svg {
-                top: -14%;
-              }
+            p {
+              font-size: 12px;
+              line-height: 14px;
             }
-            div:first-child {
-              svg {
-                left: 40%;
-              }
-            }
-            div:nth-child(3) {
-              svg {
-                left: 41%;
-              }
-            }
-            div:last-child {
-              svg {
-                left: 35%;
-              }
+            li {
+              font-size: 12px;
+              line-height: 14px;
             }
           }
         }
-      }
-    }
-  }
-  
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
-    body {
-      main {
-        .presentation {
-          article {
-            justify-content: center;
+      } 
+      .lastOne {
+        article {
+          div {
             img {
-              height: 30%;
-              width: 30%;
+              width: 50%;
             }
-            .perso {
-              height: 30%;
-              width: 30%;
+            svg {
+              top: -18%;
+            }
+          }
+          div:first-child {
+            svg {
+              left: 18%;
+            }
+          }
+          div:nth-child(2) {
+            svg {
+              left: 15%;
+            }
+          }
+          div:nth-child(3) {
+            svg {
+              left: 19%;
+            }
+          }
+          div:last-child {
+            svg {
+              left: 15%;
             }
           }
         }
-        .regles {
-          div {
-            article {
-              height: 100%;
-              img {
-                position: absolute;
-                top: -7%;
-              }
-              h2{
-                font-size: 17px;
-              }
-              p {
-                font-size: 12px;
-                line-height: 14px;
-              }
-              li {
-                font-size: 12px;
-                line-height: 14px;
-              }
-            }
-          }
-        } 
-        .lastOne {
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  body {
+    main { 
+      .regles {
+        div {
           article {
-            div {
-              img {
-                width: 50%;
-              }
-              svg {
-                top: -18%;
-              }
-            }
-            div:first-child {
-              svg {
-                left: 18%;
-              }
-            }
-            div:nth-child(2) {
-              svg {
-                left: 15%;
-              }
-            }
-            div:nth-child(3) {
-              svg {
-                left: 19%;
-              }
-            }
-            div:last-child {
-              svg {
-                left: 15%;
-              }
-            }
-          }
-          }
-      }
-    }
-  }
-  
-  @media screen and (min-width: 1600px) {
-    body {
-      main { 
-        .regles {
-          div {
-            article {
-              img {
-                top: -8%;
-                left: -4%;
-              }
+            img {
+              top: -8%;
+              left: -4%;
             }
           }
         }
       }
     }
   }
+}
